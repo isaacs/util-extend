@@ -1,6 +1,6 @@
 {
   "name": "util-extend",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Node's internal object extension function",
   "main": "extend.js",
   "scripts": {

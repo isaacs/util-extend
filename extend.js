@@ -20,13 +20,19 @@
 // USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 module.exports = extend;
-function extend(origin, add) {
+function extend(origin, add, options) {
   // Don't do anything if add isn't an object
   if (!add || typeof add !== 'object') return origin;
 
   var keys = Object.keys(add);
   var i = keys.length;
+  var replaceOrigin = !(options && options.replace === false);
+
   while (i--) {
+    if (!replaceOrigin && origin.hasOwnProperty(keys[i])) {
+      continue;
+    }
+
     origin[keys[i]] = add[keys[i]];
   }
   return origin;

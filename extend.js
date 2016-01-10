@@ -24,10 +24,18 @@ function extend(origin, add) {
   // Don't do anything if add isn't an object
   if (!add || typeof add !== 'object') return origin;
 
-  var keys = Object.keys(add);
+  var extended = {};
+  var keys = Object.keys(origin);
   var i = keys.length;
   while (i--) {
-    origin[keys[i]] = add[keys[i]];
+    extended[keys[i]] = origin[keys[i]];
   }
-  return origin;
+
+  keys = Object.keys(add);
+  i = keys.length;
+  while (i--) {
+    extended[keys[i]] = add[keys[i]];
+  }
+
+  return extended;
 }

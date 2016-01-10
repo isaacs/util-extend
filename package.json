@@ -11,6 +11,6 @@
     "url": "git://github.com/isaacs/util-extend"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "readmeFilename": "README.md"
 }

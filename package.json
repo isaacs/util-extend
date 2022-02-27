@@ -4,7 +4,7 @@
   "description": "Node's internal object extension function",
   "main": "extend.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "tap"
   },
   "repository": {
     "type": "git",
@@ -12,5 +12,8 @@
   },
   "author": "",
   "license": "MIT",
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "tap": "^15.1.6"
+  }
 }
